@@ -65,7 +65,7 @@ const Home = () => {
       <div className="max-w-[800px] w-full mx-auto rounded-md my-5 bg-indigo-600/50 p-5">
         <table className="w-full">
           <thead>
-            <tr>
+            <tr className="text-left">
               <th>#</th>
               <th>Coins</th>
               <th>Price</th>
@@ -75,18 +75,18 @@ const Home = () => {
           </thead>
           <tbody>
             {slicedData.map((coin, index) => (
-            
-            <tr key={coin.id}>
+              <tr key={coin.id}>
                 <td>{index + 1}</td>
                 <Link to={`/coin/${coin.id}`}>
-                <td className="flex items-center ml-5">
-                  <img
-                    src={coin.image}
-                    alt={coin.name}
-                    className="w-8 h-8 mr-2"
-                  />
-                  {coin.name}
-                </td></Link>
+                  <td className="flex items-center ml-5">
+                    <img
+                      src={coin.image}
+                      alt={coin.name}
+                      className="w-8 h-8 mr-2"
+                    />
+                    {coin.name}
+                  </td>
+                </Link>
                 <td>
                   {currency.symbol}
                   {coin.current_price}
@@ -101,7 +101,6 @@ const Home = () => {
           </tbody>
         </table>
       </div>
-      
     </div>
   );
 };
