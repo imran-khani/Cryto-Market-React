@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-interface Coin {
+export interface Coin {
   id: string;
   name: string;
   current_price: number; // Correct property name for price
